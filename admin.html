@@ -1,0 +1,98 @@
+<!DOCTYPE html><html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Apoiadores - FestaFácil</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #c92a2a;
+    }
+    .stats {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f1f1;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Painel de Apoiadores</h2>
+    <div class="stats">
+      <p><strong>Total de Apoiadores:</strong> <span id="total">0</span></p>
+      <p><strong>Clientes:</strong> <span id="clientes">0</span></p>
+      <p><strong>Fornecedores:</strong> <span id="fornecedores">0</span></p>
+    </div><table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Número</th>
+      <th>Tipo</th>
+      <th>Data</th>
+    </tr>
+  </thead>
+  <tbody id="apoios-body">
+    <!-- Linhas serão inseridas aqui via JS -->
+  </tbody>
+</table>
+
+  </div>  <script>
+    // Simulação de dados recebidos (poderia ser lido de um JSON ou API futuramente)
+    const apoios = [
+      { nome: "Joana Silva", numero: "841234567", tipo: "Cliente", data: "09/04/2025" },
+      { nome: "Carlos Mendes", numero: "863456789", tipo: "Fornecedor", data: "09/04/2025" },
+      { nome: "Luísa Matos", numero: "843334455", tipo: "Cliente", data: "08/04/2025" },
+    ];
+
+    const tbody = document.getElementById("apoios-body");
+    const total = document.getElementById("total");
+    const clientes = document.getElementById("clientes");
+    const fornecedores = document.getElementById("fornecedores");
+
+    let totalClientes = 0;
+    let totalFornecedores = 0;
+
+    apoios.forEach(apoiador => {
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${apoiador.nome}</td>
+        <td>${apoiador.numero}</td>
+        <td>${apoiador.tipo}</td>
+        <td>${apoiador.data}</td>
+      `;
+      tbody.appendChild(row);
+
+      if (apoiador.tipo === "Cliente") totalClientes++;
+      if (apoiador.tipo === "Fornecedor") totalFornecedores++;
+    });
+
+    total.textContent = apoios.length;
+    clientes.textContent = totalClientes;
+    fornecedores.textContent = totalFornecedores;
+  </script></body>
+</html>

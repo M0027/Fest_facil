@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apoie o Projeto - FestaFácil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Apoie o FestaFácil</h1>
+    <p>Ajude a plataforma a crescer e tenha benefícios exclusivos quando ela for lançada.</p>
+  </header>
+
+  <section class="about-section">
+    <h2>Por que apoiar?</h2>
+    <p>O apoio mínimo é de <strong>20MT</strong>, que pode ser enviado via:</p>
+    
+    <ul class="carteiras">
+  <li>
+    <img src="https://img.icons8.com/?size=100&id=kUwZnzomzbTj&format=png&color=000000" alt="M-Pesa" />
+    <strong>M-Pesa:</strong> 843790112
+  </li>
+  <li>
+    <img src="" alt="E-Mola" />
+    <strong>E-Mola:</strong> 863727760
+  </li>
+  <li>
+    <img src="https://i.imgur.com/Z2XljpK.png" alt="M-Kesh" />
+    <strong>M-Kesh:</strong> 833072296
+  </li>
+  <li>
+    <img src="https://commons.wikimedia.org/wiki/File:Millennium_bim_Logotipo.png" alt="BIM" />
+    <strong>BIM:</strong> 87878787
+  </li>
+</ul>
+
+    <h3>Benefícios para quem apoiar:</h3>
+    <ul style="text-align: left; max-width: 600px; margin: 0 auto; font-size: 16px;">
+      <li><strong>Organizadores:</strong> acesso antecipado à plataforma, descontos em serviços e prioridade no suporte.</li><br>
+      <li><strong>Fornecedores e prestadores:</strong> destaque gratuito por 45 dias, acesso prioritário aos eventos e ganhará o titulo de apoiador no perfil o que lhe tornará especial.</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2>Confirmar apoio</h2>
+    <form id="apoioForm">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+      <input type="text" id="celular" placeholder="Seu número de celular" required />
+      <label for="comprovativo">Faça captura de tela da mensagem de confirmação e envie aqui:</label>
+      <input type="file" id="comprovativo" accept="image/*" required />
+      <button type="submit">Enviar comprovativo</button>
+      <p id="msg"></p>
+    </form>
+  </section>
+
+  <footer>
+    <p><a href="index.html">Voltar para a página inicial</a></p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="script_apoio.js"></script>
+</body>
+</html>
