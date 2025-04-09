@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FestaFácil - Encontre ou ofereça serviços para eventos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>FestaFácil</h1>
+    <p>Conectando organizadores , prestadores e fornecedores de eventos com facilidade.</p>
+  </header>
+  
+  <section class="about-section">
+  <h2>Sobre o FestaFácil</h2>
+  <p>
+    O <strong>FestaFácil</strong> é uma plataforma criada para facilitar a organização de eventos como aniversários, casamentos, batismos e confraternizações.
+    Aqui, você encontra e contrata os melhores profissionais como prestadores de serviços (ex:"<span class="fornecedor">Fotógrafos, DJs, Ornamentadores, MCs, Boleiras,  </span>"...)  e  fornecedores de materiais (ex: "<span class="fornecedor"> equipamentos de som, equipamento de ornamentação, louças, tendas,"</span> ..."), da sua região — tudo em um só lugar.
+  </p>
+  <p>
+    Se você é fornecedor ou prestador, aproveite para divulgar seus serviços e alcançar mais clientes. Se você é organizador, poupe tempo encontrando exatamente o que precisa para sua festa ser inesquecível.
+  </p>
+</section>
 
+  <section class="form-section">
+    <h2>Cadastre-se para participar do lançamento</h2>
+    <form id="interestForm">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+      <input type="text" id="whatsapp" placeholder="Seu WhatsApp" required />
+      <select id="tipo" required>
+        <option value="">Sou...</option>
+        <option value="fornecedor">Fornecedor</option>
+        <option value="cliente">Cliente</option>
+      </select>
+      <button type="submit">Quero participar</button>
+    </form>
+    <div style="margin-top: 20px;">
+  <a href="apoio.html" class="apoio-btn">Quero apoiar o projeto</a>
+</div>
+    <p id="msg">sucesso!</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FestaFácil - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
